@@ -3,6 +3,7 @@ package com.studentapp.tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import io.restassured.RestAssured;
 //import io.restassured.RestAssured;
 import io.restassured.response.Response;
 //import io.restassured.response.ValidatableResponse;
@@ -12,7 +13,7 @@ import static io.restassured.RestAssured.*;
 
 import java.util.*;
 
-public class MyFirstTest {
+public class MyFirstTest extends BaseTest {
 	
 	@DisplayName("Getting all the students from the database")
 	@Test
@@ -38,7 +39,7 @@ public class MyFirstTest {
 		//3. Best way - by using static methods directly - look line 11
 		Response res = given()
 				   .when()
-				   .get("http://localhost:8085/student/list")
+				   .get("/list")
 				   .then()
 				   .statusCode(200)
 				   .extract().response();
@@ -59,7 +60,7 @@ public class MyFirstTest {
 //		.queryParam("limit", 2)
 		.queryParams(hmap)
 		.when()
-		.get("http://localhost:8085/student/list");
+		.get("/list");
 		
 		res.prettyPrint();
 		
@@ -72,10 +73,11 @@ public class MyFirstTest {
 		Response res = given()
 				.pathParam("id", 1)
 				.when()
-				.get("http://localhost:8085/student/{id}");
+				.get("/{id}");
 		
 		res.prettyPrint();
 		
+//		RestAssured.reset(); //reset the basetest class
 	}
 
 }
