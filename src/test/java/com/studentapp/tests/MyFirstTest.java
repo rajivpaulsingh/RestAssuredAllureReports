@@ -70,8 +70,9 @@ public class MyFirstTest {
 	void getFirstStudent() {
 		
 		Response res = given()
-		.when()
-		.get("http://localhost:8085/student/1");
+				.pathParam("id", 1)
+				.when()
+				.get("http://localhost:8085/student/{id}");
 		
 		res.prettyPrint();
 		
