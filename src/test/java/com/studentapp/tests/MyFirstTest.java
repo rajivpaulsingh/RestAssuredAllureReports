@@ -43,5 +43,19 @@ public class MyFirstTest {
 		res.prettyPrint();
 		
 	}
+	
+	@DisplayName("Getting only the 2 CS students from the list")
+	@Test
+	void getSingleCSStudent() {
+		
+		Response res = given()
+		.queryParam("programme", "Computer Science")
+		.queryParam("limit", 2)
+		.when()
+		.get("http://localhost:8085/student/list");
+		
+		res.prettyPrint();
+		
+	}
 
 }
