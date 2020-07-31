@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.*;
 
 import java.util.*;
 
-public class MyFirstTest extends BaseTest {
+public class GetStudentsTest extends BaseTest {
 	
 	@DisplayName("Getting all the students from the database")
 	@Test
