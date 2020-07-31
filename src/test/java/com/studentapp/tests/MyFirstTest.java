@@ -46,7 +46,7 @@ public class MyFirstTest {
 		
 	}
 	
-	@DisplayName("Getting only the 2 CS students from the list")
+	@DisplayName("Query parameter: Getting only the 2 CS students from the list")
 	@Test
 	void getSingleCSStudent() {
 		
@@ -60,6 +60,18 @@ public class MyFirstTest {
 		.queryParams(hmap)
 		.when()
 		.get("http://localhost:8085/student/list");
+		
+		res.prettyPrint();
+		
+	}
+	
+	@DisplayName("Path parameter: Getting the first student from the list")
+	@Test
+	void getFirstStudent() {
+		
+		Response res = given()
+		.when()
+		.get("http://localhost:8085/student/1");
 		
 		res.prettyPrint();
 		
