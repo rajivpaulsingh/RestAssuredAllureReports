@@ -24,4 +24,9 @@ We are using the following elements in this API automation framework:
  	2. JsonPath (Inbuilt in rest assured but its based on Groovy)
  	3. XmlPath (Inbuilt in rest assured but its based on Groovy)
  - JsonPath online Evaluator: https://jsonpath.herokuapp.com/
- - GitHub Page: https://github.com/json-path/JsonPath	
+ - GitHub Page: https://github.com/json-path/JsonPath
+ 
+## Allure Report
+ - Install allure on your machine - brew install allure
+ - Add dependencies in the pom.xml - https://docs.qameta.io/allure/#_junit_5
+ -  
