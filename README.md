@@ -17,3 +17,4 @@ We are using the following elements in this API automation framework:
 	
  - Create the maven project in Eclipse or IntelliJ 		
  - Start writing tests
+ - Don't forget to check the pom.xml file for all the dependencies

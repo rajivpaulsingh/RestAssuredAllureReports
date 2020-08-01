@@ -7,9 +7,9 @@ import io.restassured.http.ContentType;
 
 import static io.restassured.RestAssured.*;
 
-public class CreateStudentTest extends BaseTest {
+public class CreateStudentStringPayloadTest extends BaseTest {
 	
-	@DisplayName("Create a new student")
+	@DisplayName("Create a new student by sending payload as String")
 	@Test
 	void createNewStudent() {
 		
