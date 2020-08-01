@@ -13,7 +13,7 @@ public class CreateStudentStringPayloadTest extends BaseTest {
 	@Test
 	void createNewStudent() {
 		
-		String payload = "{\"firstName\":\"Rajiv\",\"lastName\":\"Singh\",\"email\":\"Inkjhdsf@sfsdf.com\",\"programme\":\"Criminology\",\"courses\":[\"Criminal Mind\",\"Gender, Crime and Justice \",\"Philosophy of Law \"]}";
+		String payload = "{\"firstName\":\"Rajiv\",\"lastName\":\"Singh\",\"email\":\"dsds@dasdas.com\",\"programme\":\"Criminology\",\"courses\":[\"Criminal Mind\",\"Gender, Crime and Justice \",\"Philosophy of Law \"]}";
 		
 		given()
 		.when()

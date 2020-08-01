@@ -13,11 +13,11 @@ import static io.restassured.RestAssured.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CreateStudentPojoPayloadTest extends BaseTest {
+public class UpdateStudentPojoPayloadTest extends BaseTest {
 	
-	@DisplayName("Create a new student by sending payload as Java object")
+	@DisplayName("Update the existing student")
 	@Test
-	void createNewStudent() {
+	void updateStudent() {
 				
 		StudentPojo student = new StudentPojo();
 		Faker fake = new Faker();
@@ -27,10 +27,6 @@ public class CreateStudentPojoPayloadTest extends BaseTest {
 		courses.add("Algorithms");
 		courses.add("Ethics");
 		
-//		student.setFirstName("Rajiv");
-//		student.setLastName("Singh");
-//		student.setEmail("rajiv123@rajiv.com");
-//		student.setProgramme("Computer Science");
 		student.setFirstName(fake.name().firstName());
 		student.setLastName(fake.name().lastName());
 		student.setEmail(fake.internet().emailAddress());
@@ -42,9 +38,9 @@ public class CreateStudentPojoPayloadTest extends BaseTest {
 		.contentType(ContentType.JSON)
 		.when()
 		.body(student)
-		.post()
+		.put("/105")
 		.then()
-		.statusCode(201);
+		.statusCode(200);
 	}
 
 }
